@@ -51,7 +51,7 @@ class RandomThread(Thread):
         super(RandomThread, self).__init__()
 
     def randomNumberGenerator(self):
-        count = 0
+        number = 0
         """
         Generate a random number every 1 second and emit to a socketio instance (broadcast)
         Ideally to be run in a separate thread?
@@ -68,9 +68,9 @@ class RandomThread(Thread):
             while not thread_stop_event.isSet():         # this will carry on until you hit CTRL+C
                 if GPIO.input(input_port): # if port 25 == 1
                     print( "Port 25 is 1/HIGH/True - LED ON")
-                    count = count +1
-                    socketio.emit('newnumber', {'number': count}, namespace='/test')
-                    print(count)
+                    number = number +1
+                    socketio.emit('newnumber', {'number': number}, namespace='/test')
+                    print(number)
                     GPIO.output(output_port, 1)         # set port/pin value to 1/HIGH/True
                 else:
                     print("Port 25 is 0/LOW/False - LED OFF")
