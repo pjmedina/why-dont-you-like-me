@@ -40,7 +40,7 @@ output_port = 13
 GPIO.setmode(GPIO.BCM)     # set up BCM GPIO numbering
 GPIO.setup(input_port, GPIO.IN, pull_up_down=GPIO.PUD_OFF)    # set GPIO25 as input (button)
 GPIO.setup(output_port, GPIO.OUT)   # set GPIO24 as an output (LED)
-lastButtonState = 0
+
 
 #random number Generator Thread
 thread = Thread()
@@ -52,6 +52,7 @@ class RandomThread(Thread):
         super(RandomThread, self).__init__()
 
     def randomNumberGenerator(self):
+        lastButtonState = 0
         number = 0
         """
         Generate a random number every 1 second and emit to a socketio instance (broadcast)
