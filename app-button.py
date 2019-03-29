@@ -40,6 +40,7 @@ output_port = 13
 GPIO.setmode(GPIO.BCM)     # set up BCM GPIO numbering
 GPIO.setup(input_port, GPIO.IN, pull_up_down=GPIO.PUD_OFF)    # set GPIO25 as input (button)
 GPIO.setup(output_port, GPIO.OUT)   # set GPIO24 as an output (LED)
+lastButtonState = 0
 
 #random number Generator Thread
 thread = Thread()
@@ -47,7 +48,7 @@ thread_stop_event = Event()
 
 class RandomThread(Thread):
     def __init__(self):
-        self.delay = 1
+        self.delay = 0.01
         super(RandomThread, self).__init__()
 
     def randomNumberGenerator(self):
@@ -66,12 +67,14 @@ class RandomThread(Thread):
 
         try:
             while not thread_stop_event.isSet():         # this will carry on until you hit CTRL+C
-                if GPIO.input(input_port): # if port 25 == 1
-                    print( "Port 25 is 1/HIGH/True - LED ON")
-                    number = number +1
-                    socketio.emit('newnumber', {'number': number}, namespace='/test')
-                    print(number)
-                    GPIO.output(output_port, 1)         # set port/pin value to 1/HIGH/True
+                if GPIO.input(input_port) != lastButtonState: # if port 25 == 1
+                    lastButtonState = GPIO.input(input_port)
+                    print( "button Tranition Detected")
+                    if lastButtonState == 1:
+                        number = number +1
+                        socketio.emit('newnumber', {'number': number}, namespace='/test')
+                        print(number)
+                        GPIO.output(output_port, 1)         # set port/pin value to 1/HIGH/True
                 else:
                     print("Port 25 is 0/LOW/False - LED OFF")
                     GPIO.output(output_port, 0)         # set port/pin value to 0/LOW/False
