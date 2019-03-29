@@ -3,7 +3,7 @@
 Art-Tech 
 
 
-#dependencies
+## dependencies
 
 Install flask
 sudo pip3 install flask
@@ -15,7 +15,7 @@ install pandas
 sudp apt-get install python3-pandas
 
 
-#to run:
+## to run:
 export FLASK_APP=app-button.py
 flask run
 
