@@ -42,6 +42,7 @@ try:
 except ValueError as e:
     print('suup')
     haptics = False
+    continue
 
 
 #create thread
