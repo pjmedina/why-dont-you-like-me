@@ -32,9 +32,15 @@ GPIO.setup(output_port, GPIO.OUT)   # set GPIO13 as an output (LED)
 import board
 import busio
 import adafruit_drv2605
-i2c = busio.I2C(board.SCL, board.SDA)
-drv = adafruit_drv2605.DRV2605(i2c)
-drv.sequence[0] = adafruit_drv2605.Effect(47)
+
+haptics = True
+
+try:
+    i2c = busio.I2C(board.SCL, board.SDA)
+    drv = adafruit_drv2605.DRV2605(i2c)
+    drv.sequence[0] = adafruit_drv2605.Effect(47)
+else:
+    haptics = False
 
 #create thread
 thread = Thread()
@@ -58,7 +64,8 @@ class RandomThread(Thread):
                     print( "Button Tranition Detected")
                     if lastButtonState == 1:
                         #haptics
-                        drv.play()
+                        if(haptics == True):
+                            drv.play()
                         #increase counter by 1
                         number = number +1
                         # sending number to the client
