@@ -82,7 +82,7 @@ class RandomThread(Thread):
                         # print(count_df)
 
                 else:
-                    print("Port 25 is 0/LOW/False - LED OFF")
+                    #print("Port 25 is 0/LOW/False - LED OFF")
                     GPIO.output(output_port, 0)         # set port/pin value to 0/LOW/False
                 sleep(self.delay)        # wait 0.1 seconds
         finally:                   # this block will run no matter how the try block exits
