@@ -7,6 +7,7 @@ import datetime
 import pandas as pd
 from threading import Thread, Event
 
+
 # author of the skeleton code
 __author__ = 'slynn'
 
@@ -26,6 +27,14 @@ GPIO.setmode(GPIO.BCM)     # set up BCM GPIO numbering
 GPIO.setup(input_port, GPIO.IN, pull_up_down=GPIO.PUD_OFF)    # set GPIO12 as input (button)
 GPIO.setup(output_port, GPIO.OUT)   # set GPIO13 as an output (LED)
 
+#initialize the haptics
+
+import board
+import busio
+import adafruit_drv2605
+i2c = busio.I2C(board.SCL, board.SDA)
+drv = adafruit_drv2605.DRV2605(i2c)
+drv.sequence[0] = adafruit_drv2605.Effect(47)
 
 #create thread
 thread = Thread()
@@ -48,6 +57,8 @@ class RandomThread(Thread):
                     lastButtonState = GPIO.input(input_port)
                     print( "Button Tranition Detected")
                     if lastButtonState == 1:
+                        #haptics
+                        drv.play()
                         #increase counter by 1
                         number = number +1
                         # sending number to the client
