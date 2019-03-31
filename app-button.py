@@ -49,7 +49,7 @@ thread_stop_event = Event()
 
 class RandomThread(Thread):
     def __init__(self):
-        self.delay = 0.01
+        self.delay = 0.05
         super(RandomThread, self).__init__()
 
     def countButtonPush(self):

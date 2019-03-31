@@ -22,7 +22,7 @@ except ValueError as e:
     haptics = False
 
 lastButtonState = 0
-while True
+while True:
     #register button push
     if GPIO.input(input_port) != lastButtonState:
     	lastButtonState = GPIO.input(input_port)
