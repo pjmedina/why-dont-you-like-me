@@ -4,6 +4,7 @@ from flask import Flask, render_template, url_for, copy_current_request_context
 from flask_socketio import SocketIO, emit
 from time import sleep
 import datetime
+import csv
 import pandas as pd
 from threading import Thread, Event
 
@@ -75,11 +76,16 @@ class RandomThread(Thread):
                         print(number)
                         # GPIO.output(output_port, 1)
 
-                        #update dict with new count and time
+                        #add record to csv
                         time = datetime.datetime.now()
-                        dict[time] = number
-                        count_df = pd.DataFrame.from_dict(dict, orient='index')
-                        count_df.to_csv('data/boxdata.csv')
+                        row = [time, number]
+
+                        #this path might change...
+                        with open('data/boxdata.csv', 'a') as csvFile:
+                            writer = csv.writer(csvFile)
+                            writer.writerow(row)
+
+                        csvFile.close()
                         sleep(1)
                         # print(count_df)
                 socketio.emit('newnumber', {'number': number}, namespace='/test')
