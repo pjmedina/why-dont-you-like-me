@@ -24,7 +24,7 @@ from time import sleep     # this lets us have a time delay (see line 15)
 input_port = 12
 output_port = 13
 GPIO.setmode(GPIO.BCM)     # set up BCM GPIO numbering
-GPIO.setup(input_port, GPIO.IN, pull_up_down=GPIO.PUD_OFF)    # set GPIO12 as input (button)
+GPIO.setup(input_port, GPIO.IN, pull_up_down=GPIO.PUD_UP)    # set GPIO12 as input (button)
 # GPIO.setup(output_port, GPIO.OUT)   # set GPIO13 as an output (LED)
 
 #initialize the haptics
