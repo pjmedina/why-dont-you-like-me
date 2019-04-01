@@ -79,7 +79,7 @@ class RandomThread(Thread):
                         time = datetime.datetime.now()
                         dict[time] = number
                         count_df = pd.DataFrame.from_dict(dict, orient='index')
-                        count_df.to_csv('data/box1_data.csv')
+                        count_df.to_csv('data/boxdata.csv')
                         sleep(1)
                         # print(count_df)
                 socketio.emit('newnumber', {'number': number}, namespace='/test')
