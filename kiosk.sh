@@ -22,6 +22,6 @@ cd ~/Documents/why-dont-you-like-me/
 git pull
 }
 
-updateCode
+#updateCode
 runFlaskStuff
 
