@@ -3,12 +3,12 @@
 ## Artist Statement
 Artist Statement
 
-*Artists:* Alex Bondarenko, Lucia Lakatos, Pia Medina, Devaney Moraes, Samir Reynolds, Joseph Tu
-*Title:* “Why don’t you like me?”
-*Dimensions:* 12’’ x 14’’ x 44’’
-*Medium:* Mixed Media Sculpture; MDF Board, Acrylic, 7 Inch IPS LCD Displays, Power Supplies, Raspberry Pi, Masonite, Nail Polish, LED lights, ABS Plastic, Haptic Actuators
-*Installation Period:* April 3rd, 2019 - April 5th, 2019
-*Exhibited at:* Communitech, The Tannery, 151 Charles St W #100, Kitchener, ON N2G 1H6
+*Artists:* Alex Bondarenko, Lucia Lakatos, Pia Medina, Devaney Moraes, Samir Reynolds, Joseph Tu<br/>
+*Title:* “Why don’t you like me?”<br/>
+*Dimensions:* 12’’ x 14’’ x 44’’<br/>
+*Medium:* Mixed Media Sculpture; MDF Board, Acrylic, 7 Inch IPS LCD Displays, Power Supplies, Raspberry Pi, Masonite, Nail Polish, LED lights, ABS Plastic, Haptic Actuators<br/>
+*Installation Period:* April 3rd, 2019 - April 5th, 2019<br/>
+*Exhibited at:* Communitech, The Tannery, 151 Charles St W #100, Kitchener, ON N2G 1H6<br/>
 
 “Why don’t you like me?” is a social experiment that seeks to determine the nature of behaviour when presented the opportunity to provide opinion without context. By presenting a pair of identical boxes with a familiar and inviting interaction mechanism in the form of a giant like button and a like count, the viewer intuitively knows how to interact with the piece and is faced with a series of choices: Do I press the button? If so, which one? What about the other one?
 
