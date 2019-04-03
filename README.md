@@ -1,7 +1,6 @@
 # why-dont-you-like-me: a piece of art-tech
 
 ## Artist Statement
-Artist Statement
 
 *Artists:* Alex Bondarenko, Lucia Lakatos, Pia Medina, Devaney Moraes, Samir Reynolds, Joseph Tu<br/>
 *Title:* “Why don’t you like me?”<br/>
