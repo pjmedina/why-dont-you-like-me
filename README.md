@@ -28,4 +28,11 @@ install pandas
 sudp apt-get install python3-pandas
 
 
+<img width="623" alt="image" src="https://user-images.githubusercontent.com/32083332/57806207-a9a5ea00-772c-11e9-8c9e-8db2fb4fbee6.png">
 
+
+<img width="623" alt="image" src="https://user-images.githubusercontent.com/32083332/57806254-bfb3aa80-772c-11e9-8faa-f88787920584.png">
+
+<img width="336" alt="image" src="https://user-images.githubusercontent.com/32083332/57806329-e70a7780-772c-11e9-9212-c66e3a5671cb.png">
+
+<img width="541" alt="image" src="https://user-images.githubusercontent.com/32083332/57806298-d528d480-772c-11e9-9138-ee1cbda53387.png">
