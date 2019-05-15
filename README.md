@@ -27,6 +27,7 @@ pip3 install flask-socketio
 install pandas
 sudp apt-get install python3-pandas
 
+## Pictures
 
 <img width="623" alt="image" src="https://user-images.githubusercontent.com/32083332/57806207-a9a5ea00-772c-11e9-8c9e-8db2fb4fbee6.png">
 
